@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'QuestionController@index');
+Route::get('/question/{question}', 'QuestionController@show');
+Route::get('/new', 'QuestionController@new');
+Route::post('/question', 'QuestionController@store');
+
+Route::post('/answer/{answer}', 'AnswerController@store');
