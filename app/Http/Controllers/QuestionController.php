@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Question;
+use App\QuestionPlaceholder;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
@@ -21,10 +22,10 @@ class QuestionController extends Controller
     }
 
     public function show($questionId){
-        $foundQuestion = Question::with('answers')->where('id', '=', $questionId)->get();
+        $foundQuestion = Question::with('answers')->where('id', '=', $questionId)->first();
         
         return view('questions.single', [
-            'question' => $foundQuestion[0]
+            'question' => $foundQuestion
         ]);
     }
 
@@ -34,7 +35,11 @@ class QuestionController extends Controller
      * @return Response
      */
     public function new() {
-        return view('questions.new');
+        $questionPlaceholder = QuestionPlaceholder::inRandomOrder()->first();
+
+        return view('questions.new', [
+            'question_placeholder' => $questionPlaceholder
+        ]);
     }
 
     /**

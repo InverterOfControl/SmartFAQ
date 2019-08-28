@@ -13,7 +13,7 @@ class CreateQuestionPlaceholderTable extends Migration
      */
     public function up()
     {
-        Schema::create('question_placeholder', function (Blueprint $table) {
+        Schema::create('question_placeholders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('text');
@@ -27,6 +27,6 @@ class CreateQuestionPlaceholderTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('question_placeholder');
+        Schema::dropIfExists('question_placeholders');
     }
 }

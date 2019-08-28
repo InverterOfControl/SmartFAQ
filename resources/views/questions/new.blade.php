@@ -14,7 +14,7 @@
                     <label for="question-text" class="col-sm-3 control-label">your question</label>
 
                     <div class="col-sm-12">
-                        <input type="text" name="text" id="question-text" class="form-control">
+                        <input type="text" placeholder="{{ $question_placeholder->text }}" name="text" id="question-text" class="form-control">
                     </div>
                 </div>
 
