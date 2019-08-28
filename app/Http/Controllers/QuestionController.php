@@ -14,7 +14,7 @@ class QuestionController extends Controller
      * @return Response
      */
     public function index(){
-        $questions = Question::all();
+        $questions = Question::latest()->get();
 
         return view('questions.index', [
             'questions' => $questions
@@ -22,7 +22,9 @@ class QuestionController extends Controller
     }
 
     public function show($questionId){
-        $foundQuestion = Question::with('answers')->where('id', '=', $questionId)->first();
+        $foundQuestion = Question::with(['answers' => function($query){
+            $query->orderBy('created_at', 'asc');
+        }])->where('id', '=', $questionId)->first();
         
         return view('questions.single', [
             'question' => $foundQuestion

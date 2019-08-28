@@ -39,7 +39,7 @@
                 <label for="answer-text" class="col-sm-3 control-label">your answer</label>
 
                 <div class="col-md-12">
-                    <textarea name="text" id="answer-text" class="form-control"></textarea>
+                    <textarea name="text" id="answer-text" class="form-control">{{ old('text') }}</textarea>
                 </div>
             </div>
 
