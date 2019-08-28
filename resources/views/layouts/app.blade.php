@@ -8,15 +8,15 @@
     <title>SmartFAQ</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="/css/bootstrap.min.css" >
     <!-- Icon -->
-    <link rel="stylesheet" href="fonts/line-icons.css">
+    <link rel="stylesheet" href="/fonts/line-icons.css">
     <!-- Animate -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="/css/animate.css">
     <!-- Main Style -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
     <!-- Responsive Style -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="/css/responsive.css">
 
   </head>
   <body>
@@ -81,15 +81,15 @@
     <!-- End Preloader -->
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/wow.js"></script>   
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>      
-    <script src="js/waypoints.min.js"></script>   
-    <script src="js/main.js"></script>
+    <script src="/js/jquery-min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/wow.js"></script>   
+    <script src="/js/jquery.easing.min.js"></script>
+    <script src="/js/jquery.counterup.min.js"></script>      
+    <script src="/js/waypoints.min.js"></script>   
+    <script src="/js/main.js"></script>
       
   </body>
 </html>

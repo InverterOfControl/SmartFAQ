@@ -20,12 +20,11 @@ class QuestionController extends Controller
         ]);
     }
 
-    public function show($question){
-
-        $foundQuestion = Question::find($question);
-
+    public function show($questionId){
+        $foundQuestion = Question::with('answers')->where('id', '=', $questionId)->get();
+        
         return view('questions.single', [
-            'question' => $foundQuestion
+            'question' => $foundQuestion[0]
         ]);
     }
 
@@ -48,7 +47,7 @@ class QuestionController extends Controller
 
         // check for text and make sure it contains a question mark
         $this->validate($request, [
-            'text' => 'required|regex:(\?+$)',
+            'text' => 'required|min:5|regex:(\?+$)',
         ]);
 
         $newQuestion = new Question;

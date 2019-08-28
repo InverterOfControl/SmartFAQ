@@ -16,4 +16,4 @@ Route::get('/question/{question}', 'QuestionController@show');
 Route::get('/new', 'QuestionController@new');
 Route::post('/question', 'QuestionController@store');
 
-Route::post('/answer/{answer}', 'AnswerController@store');
+Route::post('/answer', 'AnswerController@store');
