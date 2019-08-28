@@ -21,13 +21,27 @@
   </head>
   <body>
     @include('common.errors')
+    <header>
+        <div class="container">      
+          <div class="row justify-content-between">
+            <div class="col-xs-6">
+              <div class="contents">
+                <h2 class="head-title"><a href="/">SmartQA</a></h2>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <a href="/"><img src="/img/icon.png" class="img-fluid" alt="Logo"></a>
+            </div> 
+          </div> 
+        </div> 
+    </header>
     @yield('content')
     
     <!-- Footer Section Start -->
     <footer id="footer" class="footer-area section-padding">
       <div class="container">
         <div class="container">
-          <div class="row">
+          <div class="row justify-content-between">
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
               <div class="widget">
                 <h3 class="footer-logo"><img src="assets/img/logo.png" alt=""></h3>
